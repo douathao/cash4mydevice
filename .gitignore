@@ -1,0 +1,5 @@
+node_modules
+
+# ignore all generate .css & .html
+public/stylesheets/*.css
+public/*.html
