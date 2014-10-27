@@ -13,6 +13,51 @@ a
     color palette('primary', 'gold')
     text-decoration underline
 
+.box
+  border 1px solid palette('primary', 'gold')
+  padding 20px
+  border-radius 10px
+  height 130px
+  margin-bottom 20px
+  p
+    margin 0
+
+.fa-star
+  color palette('primary', 'gold')
+
+.satisfied-sellers
+  position relative
+  min-height 130px
+  quote
+    font-style italic
+  .rate
+    text-align right
+    position absolute
+    bottom 0
+    right 20px
+
+.stay-connect
+  text-align center
+  margin-bottom 20px
+  h3
+    font-family font('fancy')
+    font-size 40px
+  .fa.fa-long-arrow-right
+    margin 0 20px
+    color #000
+  .fa
+    margin 0 5px
+    font-size: 30px
+    color #ccc
+  .fa-facebook-square
+    &:hover
+      color #3b5998
+  .fa-yelp
+    &:hover
+      color #c41200
+  .fa-envelope-o
+    &:hover
+      color palette('primary', 'gold')
 /**************************************************
  * Header
  **************************************************/
@@ -47,7 +92,7 @@ footer.container
   padding 15px
   border-radius 10px
   text-align center
-  margin 0 10px;
+  margin 0 10px 20px;
   p
     font-size 11px
     line-height: 12px
