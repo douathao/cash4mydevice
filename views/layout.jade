@@ -2,6 +2,56 @@ doctype html
 html
   head
     title= title
+    // Mobile First
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    // Bootstrap CSS
+    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    // Font Awesome
+    link(rel='stylesheet', href='/bower_components/fontawesome/css/font-awesome.css')
+    // Font front google (Strait)
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Strait', type='text/css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Arvo', type='text/css')
+
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    .container
+      header
+        .row
+          .col-md-12
+            h1= title
+    .top-nav-wrap
+      .container
+        .row
+          .col-md-12
+            .container-fluid
+              // Brand and toggle get grouped for better mobile display
+              .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                  span.sr-only Toggle navigation
+                  span.icon-bar
+                  span.icon-bar
+                  span.icon-bar
+                a.navbar-brand.hidden-md.hidden-sm.hidden-lg(href='#') Menu
+              // Collect the nav links, forms, and other content for toggling
+              #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                ul.nav.navbar-nav.navbar-right
+                  li
+                    a(href='#') How It Works
+                  li.nav-divider.hidden-xs
+                  li
+                    a(href='#') Track Your Device
+                  li.nav-divider.hidden-xs
+                  li
+                    a(href='#') Customer Reviews
+                  li.nav-divider.hidden-xs
+                  li
+                    a(href='#') FAQ
+
+    .container
+      .row
+        .col-md-12
+          block content
+
+    include ./includes/footer.jade
+    script(src='/bower_components/jquery/dist/jquery.min.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')

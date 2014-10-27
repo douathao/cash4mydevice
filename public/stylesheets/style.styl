@@ -1,5 +1,88 @@
-body
-  padding: 50px
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+@require 'variables.styl'
+
+p, a, label, input, textarea, body
+  font-family font('body')
+
+h1, h2, h3, h4, h5
+  font-family font('header')
+
 a
-  color: #00B7FF
+  color palette('primary', 'green', 'light')
+  text-decoration none
+  &:hover
+    color palette('primary', 'gold')
+    text-decoration underline
+
+/**************************************************
+ * Header
+ **************************************************/
+.top-nav-wrap
+  background-color palette('primary', 'green')
+  box-shadow 0 5px 5px #ccc
+  a
+    color #fff
+    text-transform uppercase
+    &:hover
+      color palette('primary', 'gold')
+  .navbar-toggle
+    border-color palette('primary', 'gold')
+    .icon-bar
+      background-color: palette('primary', 'gold')
+
+ hr
+   border-top: 1px solid palette('primary', 'gold');
+
+/**************************************************
+ * Footer
+ **************************************************/
+footer.container
+  border 1px solid palette('primary', 'green', 'light')
+  padding 15px
+  border-radius 10px
+  text-align center
+  margin 0 10px;
+  p
+    font-size 11px
+    line-height: 12px
+    margin: 0
+  .nav li
+    display inline-block
+    float none
+    margin 0
+    a:hover
+      background transparent
+
+/**************************************************
+ * Small devices (tablets, 768px and up)
+ **************************************************/
+@media (min-width: 768px)
+  @import 'sm.styl'
+
+/**************************************************
+ * Medium devices (desktops, 992px and up)
+ **************************************************/
+@media (min-width: 992px)
+  @import 'md.styl'
+
+/**************************************************
+ * Large devices (large desktops, 1200px and up)
+ **************************************************/
+@media (min-width: 1200px)
+  @import 'lg.styl'
+
+/**************************************************
+ * Override default bootstrap css
+ **************************************************/
+.top-nav-wrap .nav > li > a:hover,
+.top-nav-wrap .nav > li > a:focus
+  background-color transparent
+
+.nav .nav-divider
+  height 32px
+  background-color palette('primary', 'gold');
+  width 1px;
+
+ footer
+   .nav > li > a
+     padding 0 15px
+     margin-bottom 10px

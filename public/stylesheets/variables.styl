@@ -1,0 +1,45 @@
+/****************************
+ * Color Palettes
+ ****************************/
+$color-palettes = {
+  primary: {
+    green: {
+      base: #254021
+      light: #7AA670
+      dark: #263323
+    },
+    gold: {
+      base: #ffd700
+      light: #FFFFBB
+    }
+  }
+}
+
+/****************************
+ * Font
+ ****************************/
+$font-body = Strait, Verdana, Arial, sans-serif
+$font-header = Arvo
+$font-set = {
+  body: $font-body
+  header: $font-header
+}
+
+/****************************
+ * Function
+ ****************************/
+font(type) {
+  $font-set[type]
+}
+palette(type, color, tone = 'base') {
+  getTone(getColor(getType(type), color), tone)
+}
+getType(type) {
+  $color-palettes[type]
+}
+getColor(type, color) {
+  type[color]
+}
+getTone(color, tone) {
+  color[tone];
+}
