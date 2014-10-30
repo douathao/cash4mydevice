@@ -1,26 +1,131 @@
-extends layout
-
-block content
-  .container.content-body
-    .row.first-step
-      .col-md-12
-        .col-sm-5
-        .col-sm-7
-          h2 Select your phone type to get start
-          h4 Get an Instant Quote (It's Free!)
-      .col-sm-5
-        img(ng-src='images/phone-money.png').img-responsive.hidden-xs.center-block
-      .col-sm-7
+doctype html
+html(xmlns:ng='http://angularjs.org',ng-app='cash4MyDevice')
+  head
+    title= title
+    // Mobile First
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    // Bootstrap CSS
+    link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    // Font Awesome
+    link(rel='stylesheet', href='/bower_components/fontawesome/css/font-awesome.css')
+    // Font front google (Strait)
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Strait', type='text/css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Arvo', type='text/css')
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Cookie', type='text/css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .container
+      header
+        .row
+          .col-md-12
+            a(href='/')
+              img(ng-src='/images/cash4mydevice-logo.png', alt='Cash 4 My Device').logo.img-responsive
+    .top-nav-wrap
+      .container
+        .row
+          .col-md-12
+            .container-fluid
+              // Brand and toggle get grouped for better mobile display
+              .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#mobile-menu')
+                  span.sr-only Toggle navigation
+                  span.icon-bar
+                  span.icon-bar
+                  span.icon-bar
+                a.navbar-brand.hidden-md.hidden-sm.hidden-lg(href='#') Menu
+              // Collect the nav links, forms, and other content for toggling
+              #mobile-menu.collapse.navbar-collapse
+                ul.nav.navbar-nav.navbar-right
+                  li
+                    a(href='#') How It Works
+                  li.nav-divider.hidden-xs
+                  li
+                    a(href='#') Track Your Device
+                  li.nav-divider.hidden-xs
+                  li
+                    a(href='#') Customer Reviews
+                  li.nav-divider.hidden-xs
+                  li
+                    a(href='#') FAQ
+    .ui-view
+    .container.process
+      hr
+      .row
+        .col-md-1.hidden-xs.hidden-sm
+        .col-md-2.col-sm-6
+          .step.step1
+            img(ng-src='/images/step1.png', alt='Step 1 - Get A Quote', hover-image).img-responsive
+            h4 Get A Quote
+            p Select your device, the condition, and accept our quote.
+        .col-md-2.col-sm-6
+          .step.step2
+            img(ng-src='/images/step2.png', alt='Step 2 - Select Method', hover-image).img-responsive
+            h4  Select Method
+            p Select which shipping method you want. Shipping is Free!.
+        .col-md-2.col-sm-6
+          .step.step3
+            img(ng-src='/images/step3.png', alt='Step 3 - Ship Package', hover-image).img-responsive
+            h4  Ship Package
+            p Package your device and safely mail it with our prepaid mailing kit.
+        .col-md-2.col-sm-6
+          .step.step4
+            img(ng-src='/images/step4.png', alt='Step 4 - We Inspect', hover-image).img-responsive
+            h4  We Inspect
+            p We'll inspect your device the same day as it arrives
+        .col-md-2.col-sm-6.hidden-md.hidden-lg &nbsp;
+        .col-md-2.col-sm-6
+          .step.step5
+            img(ng-src='/images/step5.png', alt='Step 5 - You Get Cash', hover-image).img-responsive
+            h4  You Get Cash
+            p Be pay via check or Paypal the day we receive your device
+        .col-md-1.hidden-xs.hidden-sm
+      hr
+    .container
+      .row
+        .col-md-6
           .row
-            .col-md-12.arrow
-              .col-sm-6.hidden-xs
-                i.fa.fa-long-arrow-down
-              .col-sm-6
-                i.fa.fa-long-arrow-down
             .col-sm-6
-              a(ui-sref='selectModel({type: "apple"})')
-                img(ng-src='images/apple-logo.png', hover-image).apple-logo.img-responsive.center-block
+              .box
+                p
+                  strong Best Price Quotes
+                p Guaranteed Highest Offers
+                p Free Shipping
+                p Great Communication!
             .col-sm-6
-              a(ui-sref='selectModel({type: "samsung"})')
-                img(ng-src='images/samsung-logo.png', hover-image).samsung-logo.img-responsive.center-block
-
+              .box
+                p
+                  strong Sell With Confidence
+                p We provide 24/7 support
+                p We are here for you!
+        .col-md-6.satisfied-sellers
+          p
+            strong Satisfied Sellers
+          quote "Cash 4 My Device was the perfect way to sell my iPhone. The service was quick and easy, and I got paid big bucks. Full Credit to them!"
+          .rate
+            i.fa.fa-star
+            i.fa.fa-star
+            i.fa.fa-star
+            i.fa.fa-star
+            i.fa.fa-star
+            br
+            | Mark D.
+    .container.stay-connect
+      .row
+        .col-md-12
+          h3 Stay connected
+          a(href='#')
+            i.fa.fa-facebook-square
+          a(href='#')
+            i.fa.fa-yelp
+          a(href='#')
+            i.fa.fa-envelope-o
+    include ./includes/footer.jade
+    // JQuery
+    script(src='/bower_components/jquery/dist/jquery.min.js')
+    // Bootstrap
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+    // Angular
+    script(src='/bower_components/angular/angular.js')
+    script(src='/bower_components/angular-ui-router/release/angular-ui-router.js')
+    // App
+    script(src='/app/app.min.js')
