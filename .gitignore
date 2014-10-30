@@ -3,4 +3,4 @@ public/bower_components
 
 # ignore all generate .css & .html
 public/stylesheets/*.css
-public/*.html
+public/app/**/*.html
