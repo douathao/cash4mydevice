@@ -1,6 +1,24 @@
 extends layout
 
 block content
-  h2 Welcome to #{title}
-  p We buy phone
-  hr
+  .container.content-body
+    .row.first-step
+      .col-md-12
+        .col-sm-5
+        .col-sm-7
+          h2 Select your phone type to get start
+          h4 Get an Instant Quote (It's Free!)
+      .col-sm-5
+        img(src='images/phone-money.png').img-responsive.hidden-xs.center-block
+      .col-sm-7
+          .row
+            .col-md-12.arrow
+              .col-sm-6.hidden-xs
+                i.fa.fa-long-arrow-down
+              .col-sm-6
+                i.fa.fa-long-arrow-down
+            .col-sm-6
+              img(src='images/apple-logo.png').apple-logo.img-responsive.center-block
+            .col-sm-6
+              img(src='images/samsung-logo.png').samsung-logo.img-responsive.center-block
+

@@ -28,14 +28,14 @@ html
             .container-fluid
               // Brand and toggle get grouped for better mobile display
               .navbar-header
-                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#mobile-menu')
                   span.sr-only Toggle navigation
                   span.icon-bar
                   span.icon-bar
                   span.icon-bar
                 a.navbar-brand.hidden-md.hidden-sm.hidden-lg(href='#') Menu
               // Collect the nav links, forms, and other content for toggling
-              #bs-example-navbar-collapse-1.collapse.navbar-collapse
+              #mobile-menu.collapse.navbar-collapse
                 ul.nav.navbar-nav.navbar-right
                   li
                     a(href='#') How It Works
@@ -49,38 +49,39 @@ html
                   li
                     a(href='#') FAQ
 
-    .container
-      .row
-        .col-md-12
-          block content
+    block content
+
     .container.process
+      hr
       .row
         .col-md-1.hidden-xs.hidden-sm
-        .col-md-2
+        .col-md-2.col-sm-6
           .step.step1
             img(src='/images/step1.png', alt='Step 1 - Get A Quote').img-responsive
             h4 Get A Quote
             p Select your device, the condition, and accept our quote.
-        .col-md-2
+        .col-md-2.col-sm-6
           .step.step2
             img(src='/images/step2.png', alt='Step 2 - Select Method').img-responsive
             h4  Select Method
             p Select which shipping method you want. Shipping is Free!.
-        .col-md-2
+        .col-md-2.col-sm-6
           .step.step3
             img(src='/images/step3.png', alt='Step 3 - Ship Package').img-responsive
             h4  Ship Package
             p Package your device and safely mail it with our prepaid mailing kit.
-        .col-md-2
+        .col-md-2.col-sm-6
           .step.step4
             img(src='/images/step4.png', alt='Step 4 - We Inspect').img-responsive
             h4  We Inspect
             p We'll inspect your device the same day as it arrives
-        .col-md-2
+        .col-md-2.col-sm-6.hidden-md.hidden-lg &nbsp;
+        .col-md-2.col-sm-6
           .step.step5
             img(src='/images/step5.png', alt='Step 5 - You Get Cash').img-responsive
             h4  You Get Cash
             p Be pay via check or Paypal the day we receive your device
+
         .col-md-1.hidden-xs.hidden-sm
       hr
 
@@ -88,14 +89,14 @@ html
       .row
         .col-md-6
           .row
-            .col-md-6
+            .col-sm-6
               .box
                 p
                   strong Best Price Quotes
                 p Guaranteed Highest Offers
                 p Free Shipping
                 p Great Communication!
-            .col-md-6
+            .col-sm-6
               .box
                 p
                   strong Sell With Confidence
