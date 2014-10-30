@@ -9,7 +9,7 @@ block content
           h2 Select your phone type to get start
           h4 Get an Instant Quote (It's Free!)
       .col-sm-5
-        img(src='images/phone-money.png').img-responsive.hidden-xs.center-block
+        img(ng-src='images/phone-money.png').img-responsive.hidden-xs.center-block
       .col-sm-7
           .row
             .col-md-12.arrow
@@ -18,7 +18,9 @@ block content
               .col-sm-6
                 i.fa.fa-long-arrow-down
             .col-sm-6
-              img(src='images/apple-logo.png').apple-logo.img-responsive.center-block
+              a(ui-sref='selectModel({type: "apple"})')
+                img(ng-src='images/apple-logo.png', hover-image).apple-logo.img-responsive.center-block
             .col-sm-6
-              img(src='images/samsung-logo.png').samsung-logo.img-responsive.center-block
+              a(ui-sref='selectModel({type: "samsung"})')
+                img(ng-src='images/samsung-logo.png', hover-image).samsung-logo.img-responsive.center-block
 

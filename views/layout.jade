@@ -1,5 +1,5 @@
 doctype html
-html
+html(xmlns:ng='http://angularjs.org',ng-app='cash4MyDevice')
   head
     title= title
     // Mobile First
@@ -20,7 +20,7 @@ html
         .row
           .col-md-12
             a(href='/')
-              img(src='/images/cash4mydevice-logo.png', alt='Cash 4 My Device').logo.img-responsive
+              img(ng-src='/images/cash4mydevice-logo.png', alt='Cash 4 My Device').logo.img-responsive
     .top-nav-wrap
       .container
         .row
@@ -48,7 +48,7 @@ html
                   li.nav-divider.hidden-xs
                   li
                     a(href='#') FAQ
-
+    .ui-view
     block content
 
     .container.process
@@ -57,28 +57,28 @@ html
         .col-md-1.hidden-xs.hidden-sm
         .col-md-2.col-sm-6
           .step.step1
-            img(src='/images/step1.png', alt='Step 1 - Get A Quote').img-responsive
+            img(ng-src='/images/step1.png', alt='Step 1 - Get A Quote', hover-image).img-responsive
             h4 Get A Quote
             p Select your device, the condition, and accept our quote.
         .col-md-2.col-sm-6
           .step.step2
-            img(src='/images/step2.png', alt='Step 2 - Select Method').img-responsive
+            img(ng-src='/images/step2.png', alt='Step 2 - Select Method', hover-image).img-responsive
             h4  Select Method
             p Select which shipping method you want. Shipping is Free!.
         .col-md-2.col-sm-6
           .step.step3
-            img(src='/images/step3.png', alt='Step 3 - Ship Package').img-responsive
+            img(ng-src='/images/step3.png', alt='Step 3 - Ship Package', hover-image).img-responsive
             h4  Ship Package
             p Package your device and safely mail it with our prepaid mailing kit.
         .col-md-2.col-sm-6
           .step.step4
-            img(src='/images/step4.png', alt='Step 4 - We Inspect').img-responsive
+            img(ng-src='/images/step4.png', alt='Step 4 - We Inspect', hover-image).img-responsive
             h4  We Inspect
             p We'll inspect your device the same day as it arrives
         .col-md-2.col-sm-6.hidden-md.hidden-lg &nbsp;
         .col-md-2.col-sm-6
           .step.step5
-            img(src='/images/step5.png', alt='Step 5 - You Get Cash').img-responsive
+            img(ng-src='/images/step5.png', alt='Step 5 - You Get Cash', hover-image).img-responsive
             h4  You Get Cash
             p Be pay via check or Paypal the day we receive your device
 
@@ -130,5 +130,16 @@ html
 
 
     include ./includes/footer.jade
+    // JQuery
     script(src='/bower_components/jquery/dist/jquery.min.js')
+    // Bootstrap
     script(src='/bower_components/bootstrap/dist/js/bootstrap.min.js')
+    // Angular
+    script(src='/bower_components/angular/angular.js')
+    script(src='/bower_components/angular-ui-router/release/angular-ui-router.js')
+    // App
+    script(src='/app/app.js')
+    script(src='/app/core/index.js')
+    script(src='/app/core/directives.js')
+    script(src='/app/main/index.js')
+    script(src='/app/main/controllers.js')
