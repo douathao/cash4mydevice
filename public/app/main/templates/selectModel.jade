@@ -7,5 +7,5 @@
         div(ng-repeat='device in devices')
           .col-sm-3.col-md-2
             a(ui-sref="selectCarrier({type: '{{ type }}', model: '{{ device.uri }}' })")
-              div(class="{{device.uri}}").device.center-block
+              img(ng-src='/images/devices/{{device.uri}}.png', hover-image).center-block.img-responsive
               h4 {{ device.name }}
