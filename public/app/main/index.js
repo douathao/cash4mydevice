@@ -3,15 +3,31 @@ angular.module('cash4MyDevice.main', [
 ])
   .config([
     '$stateProvider',
-    function ($stateProvider) {
+    'devicesProvider',
+    function ($stateProvider, devicesProvider) {
+      var templateDir = '/app/main/templates/',
+          allDevices = devicesProvider.getAllDevice();
+
       $stateProvider
+        .state('main', {
+          url: '/device',
+          abstract: true,
+          template: '<div ui-view></div>'
+        })
         .state('selectType', {
-          url: '/',
-          templateUrl: '/app/main/templates/main.html'
+          url: '',
+          parent: 'main',
+          templateUrl: templateDir + 'main.html'
         })
         .state('selectModel', {
-          url: '/:type',
-          controller: 'SelectTypeCtrl',
-          template: '{{type}}'
+          parent: 'main',
+          url: '/{type:(?:apple|samsung)}',
+          templateUrl: templateDir + 'selectModel.html',
+          controller: 'SelectTypeCtrl'
+        })
+        .state('selectCarrier', {
+          parent: 'main',
+          url: '/{type:(?:apple|samsung)}/{model:(?:' + allDevices.join('|') + ')}',
+          templateUrl: templateDir + 'selectCarrier.html'
         });
     }]);

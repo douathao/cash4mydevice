@@ -47,7 +47,14 @@ html(xmlns:ng='http://angularjs.org',ng-app='cash4MyDevice')
                   li.nav-divider.hidden-xs
                   li
                     a(href='#') FAQ
-    .ui-view
+
+    .container
+      .row
+        .col-md-12
+          breadcrumbs
+
+    div(ui-view="")
+
     .container.process
       hr
       .row

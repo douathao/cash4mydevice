@@ -8,10 +8,9 @@ h1, h2, h3, h4, h5
 
 a
   color palette('primary', 'green', 'light')
-  text-decoration none
-  &:hover
+  &:hover, &:focus
     color palette('primary', 'gold')
-    text-decoration underline
+    text-decoration none
 
 .box
   border 1px solid palette('primary', 'gold')
@@ -84,9 +83,14 @@ header
   .arrow
     text-align center
     font-size 50px
-  .apple-logo
-    margin-bottom 20px
-    width 30%
+
+/**************************************************
+* Devices model
+**************************************************/
+.device-model
+  h4
+    text-align center
+
 
 /**************************************************
  * Process
@@ -156,3 +160,7 @@ footer.container
    .nav > li > a
      padding 0 15px
      margin-bottom 10px
+
+.breadcrumb
+  margin-top 15px
+  margin-bottom 0

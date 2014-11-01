@@ -84,7 +84,7 @@ module.exports = function (grunt) {
         tasks: ['jade']
       },
       js: {
-        files: 'public/js/**/*.js',
+        files: 'public/app/**/*.js',
         tasks: ['jshint', 'concat', 'uglify:development']
       }
     }

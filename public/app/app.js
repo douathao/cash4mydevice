@@ -15,7 +15,9 @@ angular.module('cash4MyDevice', [
           requireBase: false
         });
       }
-      $urlRouterProvider.otherwise('/');
+      
+      $urlRouterProvider.otherwise('/device');
+
       $stateProvider
         .state('contacts', {
           url: '/contacts',

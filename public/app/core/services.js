@@ -1,0 +1,1 @@
+angular.module('cash4MyDevice.core');

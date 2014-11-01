@@ -1,0 +1,11 @@
+.container.device-model
+  .row
+    .col-md-12
+      h2 Select your model
+    .col-sm-12
+      .row
+        div(ng-repeat='device in devices')
+          .col-sm-3.col-md-2
+            a(ui-sref="selectCarrier({type: '{{ type }}', model: '{{ device.uri }}' })")
+              img(ng-src='/images/devices/{{ device.image }}', hover-image).img-responsive.center-block
+              h4 {{ device.name }}
