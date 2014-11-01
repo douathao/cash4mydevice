@@ -100,6 +100,15 @@ module.exports = function (grunt) {
         files: 'public/app/**/*.js',
         tasks: ['jshint', 'concat', 'uglify:development']
       }
+    },
+    /**
+     * Karma config
+     **/
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js',
+        autoWatch: true
+      }
     }
   });
 
