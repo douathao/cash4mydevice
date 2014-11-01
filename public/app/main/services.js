@@ -9,11 +9,11 @@ angular.module('cash4MyDevice.main')
           { name: 'Galaxy S 3', image: 'galaxy-s3.png', uri: 'galaxy-s3' },
         ],
         apple = [
-          { name: 'iPhone 5S', image: 'iphone5s.png', uri: 'iphone-5s' },
-          { name: 'iPhone 5C', image: 'iphone5c.png', uri: 'iphone-5c' },
-          { name: 'iPhone 5', image: 'iphone5.png', uri: 'iphone-5'  },
-          { name: 'iPhone 4S', image: 'iphone4.png', uri: 'iphone-4s'  },
-          { name: 'iPhone 4', image: 'iphone4.png', uri: 'iphone-4' }
+          { name: 'iPhone 5S', uri: 'iphone-5s' },
+          { name: 'iPhone 5C', uri: 'iphone-5c' },
+          { name: 'iPhone 5', uri: 'iphone-5'  },
+          { name: 'iPhone 4S', uri: 'iphone-4'  },
+          { name: 'iPhone 4', uri: 'iphone-4' }
         ];
     return {
       $get: function () {
