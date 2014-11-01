@@ -97,5 +97,5 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['jshint', 'concat', 'jade', 'uglify:development', 'watch']);
 
   // Build - for production
-  grunt.registerTask('build', ['concat', 'uglify:build']);
+  grunt.registerTask('build', ['concat', 'jade', 'uglify:build']);
 };
