@@ -1,5 +1,28 @@
 /* global $ */
 angular.module('cash4MyDevice.main')
+  .provider('carriers', function () {
+    var carriers = [
+          { name: 'T-Mobile', uri: 't-mobile' },
+          { name: 'AT&T', uri: 'at&t' },
+          { name: 'Sprint', uri: 'sprint' },
+          { name: 'Verizon', uri: 'verizon' },
+          { name: 'Unlocked', uri: 'unlocked' }
+        ];
+    return {
+      $get: function () {
+        this.getCarriers = function () {
+          return carriers;
+        };
+
+        return this;
+      },
+      getAllCarrier: function () {
+        return carriers.map(function (device) {
+          return device.uri;
+        });
+      }
+    };
+  })
   .provider('devices', function () {
     var samsung = [
           { name: 'Galaxy Note 4', image: 'galaxy-note-4.png', uri: 'galaxy-note-4' },

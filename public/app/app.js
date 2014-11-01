@@ -5,9 +5,8 @@ angular.module('cash4MyDevice', [
 ])
   .config([
     '$locationProvider',
-    '$stateProvider',
     '$urlRouterProvider',
-    function ($locationProvider, $stateProvider, $urlRouterProvider) {
+    function ($locationProvider, $urlRouterProvider) {
       // use html5 pushState if available
       if (window.history && history.pushState) {
         $locationProvider.html5Mode({
@@ -15,12 +14,16 @@ angular.module('cash4MyDevice', [
           requireBase: false
         });
       }
-      
+
       $urlRouterProvider.otherwise('/device');
 
-      $stateProvider
-        .state('contacts', {
-          url: '/contacts',
-          template: '<h1>Hello</h1>'
-        });
+    }])
+  .run([
+    '$rootScope',
+    '$state',
+    '$stateParams',
+    function ($rootScope, $state, $stateParams) {
+      // global
+      $rootScope.$state = $state;
+      $rootScope.$stateParams = $stateParams;
     }]);
