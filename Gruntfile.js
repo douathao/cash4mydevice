@@ -76,12 +76,25 @@ module.exports = function (grunt) {
       }
     },
     /**
+     * Stylus config
+     **/
+    stylus: {
+      complie: {
+        dest: 'public/stylesheets/style.css',
+        src: 'public/stylesheets/*.styl'
+      }
+    },
+    /**
      * Watch config
      **/
     watch: {
       jade: {
         files: 'public/app/**/*.jade',
         tasks: ['jade']
+      },
+      stylus: {
+        files: 'public/stylesheets/*.styl',
+        tasks: ['stylus']
       },
       js: {
         files: 'public/app/**/*.js',
@@ -94,8 +107,8 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Default task(s).
-  grunt.registerTask('default', ['jshint', 'concat', 'jade', 'uglify:development', 'watch']);
+  grunt.registerTask('default', ['jshint', 'concat', 'stylus', 'jade', 'uglify:development', 'watch']);
 
   // Build - for production
-  grunt.registerTask('build', ['concat', 'jade', 'uglify:build']);
+  grunt.registerTask('build', ['concat', 'stylus', 'jade', 'uglify:build']);
 };
