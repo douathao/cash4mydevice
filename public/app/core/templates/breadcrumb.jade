@@ -2,11 +2,11 @@ ol.breadcrumb
   li(ng-repeat='crumb in crumbs', ng-class='{active: $last}')
     span(ng-switch='$last')
       span(ng-switch-when='true')
-        | {{crumb.name}}
+        | {{ ::crumb.name }}
       span(ng-switch-default='ng-switch-default')
         span(ng-if='ng-if')
           | -1" class="invalid-crumb"
-          | {{crumb.name}}
+          | {{ ::crumb.name }}
         span(ng-if='invalidCrumb.indexOf(crumb.name) === -1')
-          a(href='{{crumb.url}}')
-            | {{crumb.name}}
+          a(href='{{ ::crumb.url }}')
+            | {{ ::crumb.name }}

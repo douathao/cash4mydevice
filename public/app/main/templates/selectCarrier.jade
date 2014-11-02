@@ -1,12 +1,12 @@
 .container.device-carrier
   .row
     .col-md-12
-      h2 Choose the carrier of the {{ phone }} you're selling
+      h2 Choose the carrier of the {{ ::$stateParams.model }} you're selling
 
   .row
     .col-sm-1.hidden-sm
     div(ng-repeat='carrier in carriers')
       .col-sm-6.col-md-2
-        a(ui-sref="selectPhone({type: $stateParams.type, model: $stateParams.model, carrier: '{{ carrier.uri }}' })")
-          img(ng-src='/images/carriers/{{carrier.uri}}.png', hover-image).center-block.img-responsive
-          h4.text-center {{ carrier.name }}
+        a(ui-sref="selectPhone({type: $stateParams.type, model: $stateParams.model, carrier: '{{ ::carrier.uri }}' })")
+          img(ng-src='/images/carriers/{{ ::carrier.uri }}.png', hover-image).center-block.img-responsive
+          h4.text-center {{ ::carrier.name }}
