@@ -1,9 +1,10 @@
 node_modules
 public/bower_components
 
-# ignore all generate .css & .html
+# ignore all generate css, html, js
 public/stylesheets/*.css
 public/app/**/*.html
+public/app/app.min.js
 
 # ignore coverage report
 public/coverage
