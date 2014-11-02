@@ -7,8 +7,8 @@ angular.module('cash4MyDevice.main', [
     'carriersProvider',
     function ($stateProvider, devicesProvider, carriersProvider) {
       var templateDir = '/app/main/templates/',
-          allDevices = devicesProvider.getAllDevice().join('|'),
-          allCarriers = carriersProvider.getAllCarrier().join('|');
+          allDevicesUri = devicesProvider.getAllUri().join('|'),
+          allCarriersUri = carriersProvider.getAllUri().join('|');
 
       $stateProvider
         .state('main', {
@@ -29,13 +29,13 @@ angular.module('cash4MyDevice.main', [
         })
         .state('selectCarrier', {
           parent: 'main',
-          url: '/{type:(?:apple|samsung)}/{model:(?:' + allDevices + ')}',
+          url: '/{type:(?:apple|samsung)}/{model:(?:' + allDevicesUri + ')}',
           templateUrl: templateDir + 'selectCarrier.html',
           controller: 'SelectCarrierCtrl'
         })
         .state('selectPhone', {
           parent: 'main',
-          url: '/{type:(?:apple|samsung)}/{model:(?:' + allDevices + ')}/{carrier:(?:' + allCarriers + ')}',
+          url: '/{type:(?:apple|samsung)}/{model:(?:' + allDevicesUri + ')}/{carrier:(?:' + allCarriersUri + ')}',
           templateUrl: templateDir + 'selectPhone.html',
           controller: 'SelectPhoneCtrl'
         });
