@@ -108,6 +108,10 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'karma.conf.js',
         autoWatch: true
+      },
+      coverage: {
+        configFile: 'karma.coverage.conf.js',
+        autoWatch: false
       }
     }
   });
@@ -120,4 +124,10 @@ module.exports = function (grunt) {
 
   // Build - for production
   grunt.registerTask('build', ['concat', 'stylus', 'jade', 'uglify:build']);
+
+  // Unit test
+  grunt.registerTask('test', ['karam:unit']);
+
+  // Coverage report
+  grunt.registerTask('coverage', ['karma:coverage']);
 };

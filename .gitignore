@@ -4,3 +4,6 @@ public/bower_components
 # ignore all generate .css & .html
 public/stylesheets/*.css
 public/app/**/*.html
+
+# ignore coverage report
+public/coverage
