@@ -38,5 +38,16 @@ angular.module('cash4MyDevice.main', [
           url: '/{type:(?:apple|samsung)}/{model:(?:' + allDevicesUri + ')}/{carrier:(?:' + allCarriersUri + ')}',
           templateUrl: templateDir + 'selectCapacity.html',
           controller: 'SelectCapacityCtrl'
+        })
+        .state('selectCondition', {
+          parent: 'main',
+          url:
+            '/{type:(?:apple|samsung)}' +
+            '/{model:(?:' + allDevicesUri + ')}' +
+            '/{carrier:(?:' + allCarriersUri + ')}' +
+              // TODO: no hard code?
+            '/{capacity:(?:16|32|64)}-gb',
+          templateUrl: templateDir + 'selectCondition.html',
+          controller: 'selectConditionCtrl'
         });
     }]);

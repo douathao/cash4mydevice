@@ -6,6 +6,6 @@
       .row
         div(ng-repeat='cap in capacity')
           .col-sm-3.col-md-2
-            a
+            a(ui-sref="selectCondition({type: $stateParams.type, model: $stateParams.model, carrier: $stateParams.carrier, capacity: '{{ ::cap }}' })")
               img(ng-src='/images/devices/{{ ::$stateParams.model }}.png', hover-image).center-block.img-responsive
               h4.text-center {{ ::cap }} GB

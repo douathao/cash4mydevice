@@ -1,5 +1,17 @@
 /* global $ */
 angular.module('cash4MyDevice.main')
+  .value('conditions', [
+    { condition: 'Mint',
+      rule: ['No Scratches', 'No Blemishes Whatsoever', 'Flawless Condition'] },
+    { condition: 'Good',
+      rule: ['Fully Functional', 'All buttons work', 'No chips or major scratches', 'Never exposed to liquid'] },
+    { condition: 'Cracked',
+      rule: ['Fully Functional', 'Cracked front or back glass', 'LCD is NOT damaged', 'Never exposed to liquid'] },
+    { condition: 'Damaged',
+      rule: ['Damaged LCD screen', 'Non—Working or missing buttons', 'Has engraving'] },
+    { condition: 'Brooken',
+      rule: ['Does NOT power on', 'Bent midframe', 'Software issues', 'Any password lock'] }
+  ])
   .provider('carriers', function () {
     var carriers = [
       { name: 'T-Mobile', uri: 't-mobile' },

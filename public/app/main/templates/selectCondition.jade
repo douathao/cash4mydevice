@@ -1,0 +1,23 @@
+.container
+  .row
+    .col-md-12
+      h1 Choose the condition for {{ ::$stateParams.model }}
+
+    .row
+      .col-sm-2
+        img(ng-src='/images/devices/{{ ::$stateParams.model }}.png').center-block.img-responsive
+      .col-sm-10
+        .row
+          div(ng-repeat='condition in conditions')
+            .col-sm-6.col-md-3
+
+              a(ui-sref="selectCondition({type: $stateParams.type, model: $stateParams.model, carrier: $stateParams.carrier, capacity: $stateParams.capacity })")
+
+                h4.text-center {{ condition.condition }}
+
+              ul
+                li(ng-repeat='rule in condition.rule') {{ rule }}
+
+    .col-md-12.text-center
+      h4 Quotes Guaranteed Until 30 Days from Today Sell now to get the highest possible price!
+      p We do not purchase iPhones reported lost or stolen.

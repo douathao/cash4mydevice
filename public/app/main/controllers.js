@@ -16,4 +16,12 @@ angular.module('cash4MyDevice.main')
     'devices',
     function ($scope, devices) {
       $scope.capacity = devices.getAllCapacity();
+    }])
+  .controller('selectConditionCtrl', [
+    '$scope',
+    'devices',
+    'conditions',
+    function ($scope, devices, conditions) {
+      $scope.conditions = conditions;
+      $scope.capacity = devices.getAllCapacity();
     }]);
