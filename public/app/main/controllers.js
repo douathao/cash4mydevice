@@ -1,3 +1,4 @@
+/* global $ */
 angular.module('cash4MyDevice.main')
   .controller('SelectModelCtrl', [
     '$scope',
@@ -24,4 +25,45 @@ angular.module('cash4MyDevice.main')
     function ($scope, devices, conditions) {
       $scope.conditions = conditions;
       $scope.capacity = devices.getAllCapacity();
+    }])
+  .controller('ReviewPhoneCtrl', [
+    function () {
+      $('#highchart').highcharts({
+        title: {
+          text: 'Price Data',
+          x: -20 //center
+        },
+        xAxis: {
+          categories: ['May', 'Jun',
+            'Jul', 'Aug', 'Sep', 'Oct', 'Nov']
+        },
+        yAxis: {
+          title: {
+            text: 'Price'
+          },
+          labels: {
+            formatter: function () {
+              return '$' + this.value;
+            }
+          },
+          plotLines: [{
+            value: 0,
+            width: 1,
+            color: '#808080'
+          }]
+        },
+        tooltip: {
+          valuePrefix: '$'
+        },
+        legend: {
+          layout: 'vertical',
+          align: 'right',
+          verticalAlign: 'middle',
+          borderWidth: 0
+        },
+        series: [{
+          name: 'Device',
+          data: [489, 466, 470, 448, 406, 381, 391]
+        }]
+      });
     }]);

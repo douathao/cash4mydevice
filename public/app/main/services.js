@@ -9,7 +9,7 @@ angular.module('cash4MyDevice.main')
       rule: ['Fully Functional', 'Cracked front or back glass', 'LCD is NOT damaged', 'Never exposed to liquid'] },
     { condition: 'Damaged',
       rule: ['Damaged LCD screen', 'Non—Working or missing buttons', 'Has engraving'] },
-    { condition: 'Brooken',
+    { condition: 'Broken',
       rule: ['Does NOT power on', 'Bent midframe', 'Software issues', 'Any password lock'] }
   ])
   .provider('carriers', function () {

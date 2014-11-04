@@ -1,0 +1,75 @@
+.container.review-device
+  .row
+    .col-md-8
+      h1 Review {{ ::$stateParams.type | capitalize}} {{ ::$stateParams.model | capitalize }} ({{ ::$stateParams.carrier | capitalize }})
+      .row
+        .col-sm-4
+          img(ng-src='/images/devices/{{ ::$stateParams.model }}.png').center-block.img-responsive
+        .col-sm-8
+          #highchart
+          p.alert.alert-info.mt-20 Note, sale prices of listings are affected by many factors including condition and included accessories.
+
+
+      .row.mt-20
+        .col-md-12
+          p.alert.alert-info You must agree to our criteria and terms (check both boxes) to continue.
+        .col-md-12
+          input(type='checkbox', ng-model='terms.one')
+          | &nbsp;&nbsp; The device I am listing meets all the Criteria for Sale (right) AND the Other Terms (below).
+          br
+          input(type='checkbox', ng-model='terms.two')
+          | &nbsp;&nbsp; I have read and accepted the Terms of Use for this site and service.
+          br
+          button(type='button',ng-class='{disabled: !(terms.one && terms.two)}').btn.btn-success.btn-lg.mt-20 Get Paid
+
+          .panel.panel-default.mt-20
+            .panel-heading Other terms
+            .panel-body
+              ul
+                li Once your device sells you will be expected to ship to the buyer within two (2) business days of receiving payment. Seller pays standard / domestic shipping fees.
+                li Once your device sells you will need to ensure it is un-registered from your carrier's account (if applicable).
+                li If you have your device is listed on other services (e.g. eBay, Craigslist), it is your responsibility to remove the listing from Cash 4 My Device immediately if your device sells elsewhere.
+                li You will be asked to provide a "verification photo" showing your listing code (assigned after listing is created) written on a piece of paper next to the device you're selling.
+                li You must be capable of receiving payments via PayPal and be willing to accept their fees.
+                li The same device cannot be listed in multiple international markets at the same time.
+
+
+    .col-md-4.sideBar
+      .panel.panel-default
+        .panel-heading Criteria for Sale
+        .panel-body
+          h5
+            strong REQUIRED:
+          ul
+            li
+              i.fa.fa-check &nbsp;
+              | <strong>Device is fully functional</strong>, including all buttons and ports.
+            li
+              i.fa.fa-check &nbsp;
+              | <strong>Device is and ready for activation</strong> and not reported lost or stolen.
+            li
+              i.fa.fa-check &nbsp;
+              | <strong>Device is free of cracks and water damage</strong> and other non-cosmetic damage.
+            li
+              i.fa.fa-check &nbsp;
+              | <strong>Device has functional battery</strong> (not damaged) included with sale.
+            li
+              i.fa.fa-check &nbsp;
+              | The device and seller must otherwise qualify for sale in accordance with our Terms of Use.
+          h5
+            strong NOT ALLOWED:
+          ul
+            li
+              i.fa.fa-times &nbsp;
+              | <strong>Device with bad ESN</strong> (or otherwise not able to activated).
+            li
+              i.fa.fa-times &nbsp;
+              strong Device with cracks on screen or glass.
+            li
+              i.fa.fa-times &nbsp;
+              | <strong>Device with water damage</strong> (or missing moisture indicator stickers).
+            li
+              i.fa.fa-times &nbsp;
+              | Devices with an outstanding EIP balance (money owed to carrier).
+        .panel-footer
+          | All devices listed on Cash 4 my Device must meet the Criteria for Sale.

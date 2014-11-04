@@ -49,5 +49,17 @@ angular.module('cash4MyDevice.main', [
             '/{capacity:(?:16|32|64)}-gb',
           templateUrl: templateDir + 'selectCondition.html',
           controller: 'selectConditionCtrl'
+        })
+        .state('reviewPhone', {
+          parent: 'main',
+          url:
+            '/{type:(?:apple|samsung)}' +
+            '/{model:(?:' + allDevicesUri + ')}' +
+            '/{carrier:(?:' + allCarriersUri + ')}' +
+            '/{capacity:(?:16|32|64)}-gb' +
+              // TODO: no hard code?
+            '/{condition:(?:mint|good|cracked|damaged|broken)}',
+          templateUrl: templateDir + 'reviewPhone.html',
+          controller: 'ReviewPhoneCtrl'
         });
     }]);

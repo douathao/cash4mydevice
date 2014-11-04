@@ -11,12 +11,12 @@
           div(ng-repeat='condition in conditions')
             .col-sm-6.col-md-3
 
-              a(ui-sref="selectCondition({type: $stateParams.type, model: $stateParams.model, carrier: $stateParams.carrier, capacity: $stateParams.capacity })")
+              a(ui-sref="reviewPhone({type: $stateParams.type, model: $stateParams.model, carrier: $stateParams.carrier, capacity: $stateParams.capacity, condition: '{{ ::condition.condition | lowercase }}' })")
 
-                h4.text-center {{ condition.condition }}
+                h4.text-center {{ ::condition.condition }}
 
               ul
-                li(ng-repeat='rule in condition.rule') {{ rule }}
+                li(ng-repeat='rule in condition.rule') {{ ::rule }}
 
     .col-md-12.text-center
       h4 Quotes Guaranteed Until 30 Days from Today Sell now to get the highest possible price!
