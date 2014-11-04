@@ -11,8 +11,9 @@ angular.module('cash4MyDevice.main')
     function ($scope, carriers) {
       $scope.carriers = carriers.getCarriers();
     }])
-  .controller('SelectPhoneCtrl', [
-
-    function () {
-
+  .controller('SelectCapacityCtrl', [
+    '$scope',
+    'devices',
+    function ($scope, devices) {
+      $scope.capacity = devices.getAllCapacity();
     }]);

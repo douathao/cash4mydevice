@@ -33,10 +33,10 @@ angular.module('cash4MyDevice.main', [
           templateUrl: templateDir + 'selectCarrier.html',
           controller: 'SelectCarrierCtrl'
         })
-        .state('selectPhone', {
+        .state('selectCapacity', {
           parent: 'main',
           url: '/{type:(?:apple|samsung)}/{model:(?:' + allDevicesUri + ')}/{carrier:(?:' + allCarriersUri + ')}',
-          templateUrl: templateDir + 'selectPhone.html',
-          controller: 'SelectPhoneCtrl'
+          templateUrl: templateDir + 'selectCapacity.html',
+          controller: 'SelectCapacityCtrl'
         });
     }]);

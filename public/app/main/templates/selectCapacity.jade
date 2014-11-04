@@ -1,0 +1,11 @@
+.container
+  .row
+    .col-md-12
+      h1 Choose the capacity for {{ ::$stateParams.model }}
+    .col-sm-12
+      .row
+        div(ng-repeat='cap in capacity')
+          .col-sm-3.col-md-2
+            a
+              img(ng-src='/images/devices/{{ ::$stateParams.model }}.png', hover-image).center-block.img-responsive
+              h4.text-center {{ ::cap }} GB
