@@ -15,6 +15,7 @@ angular.module('cash4MyDevice', [
           enabled: true,
           requireBase: false
         });
+        $locationProvider.hashPrefix('!');
       }
 
       $urlRouterProvider.otherwise('/device');
