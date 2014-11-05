@@ -1,4 +1,5 @@
 angular.module('cash4MyDevice', [
+  'cash4MyDevice.customerReview',
   'cash4MyDevice.faq',
   'cash4MyDevice.main',
   'cash4MyDevice.core',

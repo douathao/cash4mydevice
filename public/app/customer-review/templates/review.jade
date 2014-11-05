@@ -1,0 +1,12 @@
+.review
+  star-rate(star='review.star')
+  p
+    strong {{ review.name }} &nbsp;
+    | - {{ review.date | date }}
+  p
+    i.fa.fa-quote-left &nbsp;&nbsp;
+    | {{ review.message }}
+    | &nbsp;&nbsp;
+    i.fa.fa-quote-right
+
+  hr(ng-hide='$last')

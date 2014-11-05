@@ -42,10 +42,10 @@ html(xmlns:ng='http://angularjs.org',ng-app='cash4MyDevice')
                   li
                     a(href='#') Track Your Device
                   li.nav-divider.hidden-xs
-                  li
-                    a(href='#') Customer Reviews
+                  li(ui-sref-active-eq='active')
+                    a(ui-sref='customerReview') Customer Reviews
                   li.nav-divider.hidden-xs
-                  li
+                  li(ui-sref-active-eq='active')
                     a(ui-sref='faq') FAQ
 
     .container

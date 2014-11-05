@@ -68,11 +68,15 @@ header
 .top-nav-wrap
   background-color palette('primary', 'green')
   box-shadow 0 5px 5px #ccc
-  a
-    color #fff
-    text-transform uppercase
-    &:hover
-      color palette('primary', 'gold')
+  li
+    &.active
+      a
+        color palette('primary', 'gold')
+    a
+      color #fff
+      text-transform uppercase
+      &:hover
+        color palette('primary', 'gold')
   .navbar-toggle
     border-color palette('primary', 'gold')
     .icon-bar
