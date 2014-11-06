@@ -75,54 +75,104 @@ angular.module('cash4MyDevice.main')
         {
           name: 'Galaxy Note 4',
           uri: 'galaxy-note-4',
-          capacity: [16, 32, 64]
+          capacity: [16, 32, 64],
+          price: {
+            16: 400,
+            32: 500,
+            64: 600
+          }
         },
         {
           name: 'Galaxy Note 3',
           uri: 'galaxy-note-3',
-          capacity: [16, 32, 64]
+          capacity: [16, 32, 64],
+          price: {
+            16: 400,
+            32: 500,
+            64: 600
+          }
         },
         {
           name: 'Galaxy S 5',
           uri: 'galaxy-s5',
-          capacity: [16, 32, 64]
+          capacity: [16, 32, 64],
+          price: {
+            16: 400,
+            32: 500,
+            64: 600
+          }
         },
         {
           name: 'Galaxy S 4',
           uri: 'galaxy-s4',
-          capacity: [16, 32, 64]
+          capacity: [16, 32, 64],
+          price: {
+            16: 400,
+            32: 500,
+            64: 600
+          }
         },
         {
           name: 'Galaxy S 3',
           uri: 'galaxy-s3',
-          capacity: [16, 32, 64]
+          capacity: [16, 32, 64],
+          price: {
+            16: 400,
+            32: 500,
+            64: 600
+          }
         }
       ],
       apple: [
         {
           name: 'iPhone 5S',
           uri: 'iphone-5s',
-          capacity: [16, 32, 64]
+          capacity: [16, 32, 64],
+          price: {
+            16: 400,
+            32: 500,
+            64: 600
+          }
         },
         {
           name: 'iPhone 5C',
           uri: 'iphone-5c',
-          capacity: [16, 32, 64]
+          capacity: [16, 32, 64],
+          price: {
+            16: 400,
+            32: 500,
+            64: 600
+          }
         },
         {
           name: 'iPhone 5',
           uri: 'iphone-5',
-          capacity: [16, 32, 64]
+          capacity: [16, 32, 64],
+          price: {
+            16: 400,
+            32: 500,
+            64: 600
+          }
         },
         {
           name: 'iPhone 4S',
           uri: 'iphone-4s',
-          capacity: [16, 32, 64]
+          capacity: [16, 32, 64],
+          price: {
+            16: 400,
+            32: 500,
+            64: 600
+          }
         },
         {
           name: 'iPhone 4',
           uri: 'iphone-4',
-          capacity: [16, 32, 64]
+          capacity: [16, 32, 64],
+          price: {
+            16: 400,
+            32: 500,
+            64: 600
+          }
         }
       ]
     };
