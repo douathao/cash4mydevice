@@ -1,6 +1,7 @@
 /* global $ */
 angular.module('cash4MyDevice.main')
   .factory('cart', function () {
+    // TODO: store device in local storage
     var cart = [];
     return {
       add: function (phone) {
@@ -361,7 +362,7 @@ angular.module('cash4MyDevice.main')
         function getPhone(type, model) {
           return devices[type || $stateParams.type].filter(function (phone) {
             return phone.uri === (model || $stateParams.model);
-          });
+          })[0];
         }
 
         this.getDevices = function (type) {
@@ -369,14 +370,19 @@ angular.module('cash4MyDevice.main')
         };
         this.getAllCapacity = function (type, model) {
           var phone = getPhone(type, model);
-          return phone[0].capacity;
+          return phone.capacity;
         };
         this.getDevice = function (type, model, carrier, capacity, condition) {
           var phone = getPhone(type, model),
-              storage = capacity || $stateParams.capacity;
-          phone.capacity = storage;
-          phone.price = phone.price[storage][condition];
-          return phone;
+              storage = capacity || $stateParams.capacity,
+              state = condition || $stateParams.condition;
+
+          return {
+            name: phone.name,
+            uri: phone.uri,
+            capacity: storage,
+            price: phone.price[storage][state]
+          };
         };
 
         return this;

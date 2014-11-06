@@ -5,6 +5,7 @@
       .row
         .col-sm-4
           img(ng-src='/images/devices/{{ ::$stateParams.model }}.png').center-block.img-responsive
+          h3.text-center Our price {{ ::device.price | currency }}
         .col-sm-8
           #highchart
           p.alert.alert-info.mt-20 Note, sale prices of listings are affected by many factors including condition and included accessories.
@@ -20,7 +21,7 @@
           input(type='checkbox', ng-model='terms.two')
           | &nbsp;&nbsp; I have read and accepted the Terms of Use for this site and service.
           br
-          button(type='button',ng-class='{disabled: !(terms.one && terms.two)}').btn.btn-success.btn-lg.mt-20 Get Paid
+          button(type='button', ng-class='{ disabled: !(terms.one && terms.two) }', ng-click='addToCart()').btn.btn-success.btn-lg.mt-20 Get Paid
 
           .panel.panel-default.mt-20
             .panel-heading Other terms

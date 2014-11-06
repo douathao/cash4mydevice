@@ -27,7 +27,12 @@ angular.module('cash4MyDevice.main')
       $scope.capacity = devices.getAllCapacity();
     }])
   .controller('ReviewPhoneCtrl', [
-    function () {
+    '$scope',
+    'cart',
+    'devices',
+    function ($scope, cart, devices) {
+      $scope.device = devices.getDevice();
+
       $('#highchart').highcharts({
         title: {
           text: 'Price Data',
@@ -66,4 +71,8 @@ angular.module('cash4MyDevice.main')
           data: [489, 466, 470, 448, 406, 381, 391]
         }]
       });
+
+      $scope.addToCart = function () {
+        cart.add($scope.device);
+      };
     }]);
