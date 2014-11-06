@@ -77,9 +77,27 @@ angular.module('cash4MyDevice.main')
           uri: 'galaxy-note-4',
           capacity: [16, 32, 64],
           price: {
-            16: 400,
-            32: 500,
-            64: 600
+            16: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            32: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            64: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            }
           }
         },
         {
@@ -87,9 +105,27 @@ angular.module('cash4MyDevice.main')
           uri: 'galaxy-note-3',
           capacity: [16, 32, 64],
           price: {
-            16: 400,
-            32: 500,
-            64: 600
+            16: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            32: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            64: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            }
           }
         },
         {
@@ -97,9 +133,27 @@ angular.module('cash4MyDevice.main')
           uri: 'galaxy-s5',
           capacity: [16, 32, 64],
           price: {
-            16: 400,
-            32: 500,
-            64: 600
+            16: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            32: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            64: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            }
           }
         },
         {
@@ -107,9 +161,27 @@ angular.module('cash4MyDevice.main')
           uri: 'galaxy-s4',
           capacity: [16, 32, 64],
           price: {
-            16: 400,
-            32: 500,
-            64: 600
+            16: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            32: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            64: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            }
           }
         },
         {
@@ -117,9 +189,27 @@ angular.module('cash4MyDevice.main')
           uri: 'galaxy-s3',
           capacity: [16, 32, 64],
           price: {
-            16: 400,
-            32: 500,
-            64: 600
+            16: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            32: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            64: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            }
           }
         }
       ],
@@ -129,9 +219,27 @@ angular.module('cash4MyDevice.main')
           uri: 'iphone-5s',
           capacity: [16, 32, 64],
           price: {
-            16: 400,
-            32: 500,
-            64: 600
+            16: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            32: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            64: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            }
           }
         },
         {
@@ -139,9 +247,27 @@ angular.module('cash4MyDevice.main')
           uri: 'iphone-5c',
           capacity: [16, 32, 64],
           price: {
-            16: 400,
-            32: 500,
-            64: 600
+            16: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            32: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            64: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            }
           }
         },
         {
@@ -149,9 +275,27 @@ angular.module('cash4MyDevice.main')
           uri: 'iphone-5',
           capacity: [16, 32, 64],
           price: {
-            16: 400,
-            32: 500,
-            64: 600
+            16: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            32: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            64: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            }
           }
         },
         {
@@ -159,9 +303,27 @@ angular.module('cash4MyDevice.main')
           uri: 'iphone-4s',
           capacity: [16, 32, 64],
           price: {
-            16: 400,
-            32: 500,
-            64: 600
+            16: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            32: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            64: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            }
           }
         },
         {
@@ -169,9 +331,27 @@ angular.module('cash4MyDevice.main')
           uri: 'iphone-4',
           capacity: [16, 32, 64],
           price: {
-            16: 400,
-            32: 500,
-            64: 600
+            16: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            32: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            },
+            64: {
+              mint: 600,
+              good: 500,
+              cracked: 400,
+              damaged: 300,
+              broken: 200
+            }
           }
         }
       ]
@@ -191,11 +371,11 @@ angular.module('cash4MyDevice.main')
           var phone = getPhone(type, model);
           return phone[0].capacity;
         };
-        this.getDevice = function (type, model, carrier, capacity) {
+        this.getDevice = function (type, model, carrier, capacity, condition) {
           var phone = getPhone(type, model),
               storage = capacity || $stateParams.capacity;
           phone.capacity = storage;
-          phone.price = phone.price[storage];
+          phone.price = phone.price[storage][condition];
           return phone;
         };
 
