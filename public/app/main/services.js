@@ -1,5 +1,19 @@
 /* global $ */
 angular.module('cash4MyDevice.main')
+  .factory('cart', function () {
+    var cart = [];
+    return {
+      add: function (phone) {
+        cart.push(phone);
+      },
+      remove: function (index) {
+        cart.splice(index, 1);
+      },
+      fetch: function () {
+        return cart;
+      }
+    };
+  })
   .value('conditions', [
     {
       condition: 'Mint',
