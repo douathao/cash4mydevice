@@ -36,6 +36,9 @@ html(xmlns:ng='http://angularjs.org',ng-app='cash4MyDevice')
               // Collect the nav links, forms, and other content for toggling
               #mobile-menu.collapse.navbar-collapse
                 ul.nav.navbar-nav.navbar-right
+                  li(ui-sref-active-eq='active')
+                    a(ui-sref='selectType') Home
+                  li.nav-divider.hidden-xs
                   li
                     a(href='#') How It Works
                   li.nav-divider.hidden-xs
