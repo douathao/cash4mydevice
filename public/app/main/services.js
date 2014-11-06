@@ -381,6 +381,8 @@ angular.module('cash4MyDevice.main')
             name: phone.name,
             uri: phone.uri,
             capacity: storage,
+            carrier: carrier || $stateParams.carrier,
+            condition: state,
             price: phone.price[storage][state]
           };
         };
