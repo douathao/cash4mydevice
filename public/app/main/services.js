@@ -1,24 +1,44 @@
 /* global $ */
 angular.module('cash4MyDevice.main')
   .value('conditions', [
-    { condition: 'Mint',
-      rule: ['No Scratches', 'No Blemishes Whatsoever', 'Flawless Condition'] },
-    { condition: 'Good',
-      rule: ['Fully Functional', 'All buttons work', 'No chips or major scratches', 'Never exposed to liquid'] },
-    { condition: 'Cracked',
-      rule: ['Fully Functional', 'Cracked front or back glass', 'LCD is NOT damaged', 'Never exposed to liquid'] },
-    { condition: 'Damaged',
-      rule: ['Damaged LCD screen', 'Non—Working or missing buttons', 'Has engraving'] },
-    { condition: 'Broken',
-      rule: ['Does NOT power on', 'Bent midframe', 'Software issues', 'Any password lock'] }
+    {
+      condition: 'Mint',
+      rule: ['No Scratches', 'No Blemishes Whatsoever', 'Flawless Condition']
+    },
+    {
+      condition: 'Good',
+      rule: ['Fully Functional', 'All buttons work', 'No chips or major scratches', 'Never exposed to liquid']
+    },
+    {
+      condition: 'Cracked',
+      rule: ['Fully Functional', 'Cracked front or back glass', 'LCD is NOT damaged', 'Never exposed to liquid']
+    },
+    {
+      condition: 'Damaged',
+      rule: ['Damaged LCD screen', 'Non—Working or missing buttons', 'Has engraving']
+    },
+    {
+      condition: 'Broken',
+      rule: ['Does NOT power on', 'Bent midframe', 'Software issues', 'Any password lock']
+    }
   ])
   .provider('carriers', function () {
     var carriers = [
-      { name: 'T-Mobile', uri: 't-mobile' },
-      { name: 'AT&T', uri: 'at&t' },
-      { name: 'Sprint', uri: 'sprint' },
-      { name: 'Verizon', uri: 'verizon' },
-      { name: 'Unlocked', uri: 'unlocked' }
+      {
+        name: 'T-Mobile', uri: 't-mobile'
+      },
+      {
+        name: 'AT&T', uri: 'at&t'
+      },
+      {
+        name: 'Sprint', uri: 'sprint'
+      },
+      {
+        name: 'Verizon', uri: 'verizon'
+      },
+      {
+        name: 'Unlocked', uri: 'unlocked'
+      }
     ];
     return {
       $get: function () {
