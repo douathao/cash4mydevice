@@ -178,14 +178,25 @@ angular.module('cash4MyDevice.main')
     };
     return {
       $get: ['$stateParams', function ($stateParams) {
+        function getPhone(type, model) {
+          return devices[type || $stateParams.type].filter(function (phone) {
+            return phone.uri === (model || $stateParams.model);
+          });
+        }
+
         this.getDevices = function (type) {
           return devices[type || $stateParams.type];
         };
         this.getAllCapacity = function (type, model) {
-          var phone = devices[type || $stateParams.type].filter(function (phone) {
-            return phone.uri === (model || $stateParams.model);
-          });
+          var phone = getPhone(type, model);
           return phone[0].capacity;
+        };
+        this.getDevice = function (type, model, carrier, capacity) {
+          var phone = getPhone(type, model),
+              storage = capacity || $stateParams.capacity;
+          phone.capacity = storage;
+          phone.price = phone.price[storage];
+          return phone;
         };
 
         return this;
