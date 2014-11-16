@@ -27,8 +27,15 @@ angular.module('cash4MyDevice', [
     '$rootScope',
     '$state',
     '$stateParams',
-    function ($rootScope, $state, $stateParams) {
+    '$window',
+    function ($rootScope, $state, $stateParams, $window) {
       // global
       $rootScope.$state = $state;
       $rootScope.$stateParams = $stateParams;
+
+      // scroll back to the top when state change
+      $rootScope.$on('$stateChangeSuccess',
+        function() {
+          $window.scrollTo(0, 0);
+        });
     }]);
