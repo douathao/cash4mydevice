@@ -12,6 +12,13 @@ angular.module('cash4MyDevice.main')
       },
       fetch: function () {
         return cart;
+      },
+      getTotalPrice: function () {
+        var totalPrice = 0;
+        cart.forEach(function (phone) {
+          totalPrice += phone.price;
+        });
+        return totalPrice;
       }
     };
   })

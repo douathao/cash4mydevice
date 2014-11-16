@@ -61,5 +61,11 @@ angular.module('cash4MyDevice.main', [
             '/{condition:(?:mint|good|cracked|damaged|broken)}',
           templateUrl: templateDir + 'reviewPhone.html',
           controller: 'ReviewPhoneCtrl'
+        })
+        .state('checkout', {
+          parent: 'main',
+          url: '/checkout',
+          templateUrl: templateDir + 'checkout.html',
+          controller: 'CheckoutCtrl'
         });
     }]);

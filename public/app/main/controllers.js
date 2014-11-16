@@ -5,19 +5,22 @@ angular.module('cash4MyDevice.main')
     'devices',
     function ($scope, devices) {
       $scope.devices = devices.getDevices($scope.$stateParams.type);
-    }])
+    }
+  ])
   .controller('SelectCarrierCtrl', [
     '$scope',
     'carriers',
     function ($scope, carriers) {
       $scope.carriers = carriers.getCarriers();
-    }])
+    }
+  ])
   .controller('SelectCapacityCtrl', [
     '$scope',
     'devices',
     function ($scope, devices) {
       $scope.capacity = devices.getAllCapacity();
-    }])
+    }
+  ])
   .controller('selectConditionCtrl', [
     '$scope',
     'devices',
@@ -25,7 +28,8 @@ angular.module('cash4MyDevice.main')
     function ($scope, devices, conditions) {
       $scope.conditions = conditions;
       $scope.capacity = devices.getAllCapacity();
-    }])
+    }
+  ])
   .controller('ReviewPhoneCtrl', [
     '$scope',
     'cart',
@@ -74,5 +78,15 @@ angular.module('cash4MyDevice.main')
 
       $scope.addToCart = function () {
         cart.add($scope.device);
+        $scope.$state.go('checkout');
       };
-    }]);
+    }
+  ])
+  .controller('CheckoutCtrl', [
+    '$scope',
+    'cart',
+    function ($scope, cart) {
+      $scope.devices = cart.fetch();
+      $scope.totalPrice = cart.getTotalPrice();
+    }
+  ]);

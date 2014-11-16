@@ -1,0 +1,99 @@
+.container.checkout
+   .row
+      .col-sm-6.col-md-4.cart
+         h3 Your Cart
+
+         div(ng-show='devices.length > 0').total-box.text-center
+            h4 Your Offer
+            | {{ totalPrice | currency }}
+
+
+         div(ng-show='devices.length === 0').alert.alert-info Your cart is empty
+
+         div(ng-repeat='device in devices').device
+            i.fa.fa-times.pull-right
+            img(ng-src='/images/devices/{{ device.uri }}.png').center-block.img-responsive
+            h4.text-center
+               | {{ device.name }}
+            p Capacity: {{ device.capacity }}GB
+            p Condition: {{ device.condition }}
+            p Carrier: {{ device.carrier }}
+            p Price: {{ device.price | currency }}
+
+         h3 What to expect next.
+         p Once your package arrives in our possession a mobile phone specialist will immediately test it and make sure it is as you described. Once the testing is complete, we will process your PayPal payment or check within 2 business days.
+
+      .col-sm-6.col-md-4
+
+         form(role='form')
+            h3 Your Information
+            .form-group
+               label(for='email') Email address
+               input(type='email', placeholder='Enter Email Address', name='email', ng-required).form-control
+            .form-group
+               label(for='firstName') First Name
+               input(type='text', placeholder='Enter First Name', name='firstName', ng-required).form-control
+            .form-group
+               label(for='lastName') Last Name
+               input(type='text', placeholder='Enter Last Name', name='lastName', ng-required).form-control
+            .form-group
+               label(for='phone') Phone
+               input(type='number', placeholder='Enter Phone (optional)', name='phone').form-control
+            .form-group
+               label(for='address') Address
+               input(type='text', placeholder='Enter Address', name='address', ng-required).form-control
+            .form-group
+               label(for='address2') Address 2
+               input(type='text', placeholder='Enter Address 2', name='address2').form-control
+            .form-group
+               label(for='city') City
+               input(type='text', placeholder='Enter City', name='city', ng-required).form-control
+            .form-group
+               label(for='state') State
+               input(type='text', placeholder='Enter State', name='state', ng-required, ng-maxlength='2').form-control
+            .form-group
+               label(for='zip') Zip
+               input(type='number', placeholder='Enter Zip', name='zip', ng-required, ng-maxlength='5').form-control
+
+            h3 Shipping
+            p
+               | We offer &nbsp;
+               strong FREE ground shipping
+               | . Please select whether you want to print your own FREE shipping label or receive FREE shipping materials in the mail.
+            .radio
+               label
+                  input(type='radio', name='shippingType', value='print', checked)
+                  | I want to print my FREE shipping label now
+            .radio
+               label
+                  input(type='radio', name='shippingType', value='mail')
+                  | I want to receive FREE shipping materials in the mail
+
+            h3 Getting paid
+            p Please select the form of payment you would like to receive.
+            .radio
+               label
+                  input(type='radio', name='paymentType', value='paypal', checked)
+                  | PayPal
+            .radio
+               label
+                  input(type='radio', name='paymentType', value='check')
+                  | Check
+
+            button(type='submit').btn.btn-default.pull-right Submit Order
+            br
+            br
+
+      .col-md-4.mt-20.clearfix
+         h5 TRUST GUARANTEE
+         ul
+            li Personal Data Cleared
+            li Super Fast Payout
+            li Free Shipping
+
+         h5 IT'S SAFE TO SHARE YOUR INFO
+         p Your info is only used to get you a shipping kit and to process your payment.
+
+         h5 WE'RE HERE TO HELP
+         p We're your advocate in the selling process! Email: &nbsp;
+            a(href='#') support@cash4mydevice.com
