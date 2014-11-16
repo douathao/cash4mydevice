@@ -10,7 +10,7 @@
 
          div(ng-show='devices.length === 0').alert.alert-info Your cart is empty
 
-         div(ng-repeat='device in devices').device
+         div(ng-repeat='device in devices track by $index').device
             i.fa.fa-times.pull-right
             img(ng-src='/images/devices/{{ device.uri }}.png').center-block.img-responsive
             h4.text-center

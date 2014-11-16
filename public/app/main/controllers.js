@@ -87,6 +87,6 @@ angular.module('cash4MyDevice.main')
     'cart',
     function ($scope, cart) {
       $scope.devices = cart.fetch();
-      $scope.totalPrice = cart.getTotalPrice();
+      $scope.totalPrice = cart.calculateTotalPrice();
     }
   ]);

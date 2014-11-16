@@ -1,27 +1,46 @@
 /* global $ */
 angular.module('cash4MyDevice.main')
-  .factory('cart', function () {
-    // TODO: store device in local storage
-    var cart = [];
-    return {
-      add: function (phone) {
-        cart.push(phone);
-      },
-      remove: function (index) {
-        cart.splice(index, 1);
-      },
-      fetch: function () {
-        return cart;
-      },
-      getTotalPrice: function () {
-        var totalPrice = 0;
-        cart.forEach(function (phone) {
-          totalPrice += phone.price;
-        });
-        return totalPrice;
+  .factory('cart', [
+    '$window',
+    function ($window) {
+      var cart = [],
+          hasLocalStorage = 'localStorage' in $window,
+          cartStorage = hasLocalStorage ? $window.localStorage : null;
+
+      if (hasLocalStorage) {
+        if (cartStorage.getItem('cart')) {
+          cart = JSON.parse(cartStorage.getItem('cart'));
+        }
       }
-    };
-  })
+
+      function updateCartStorage() {
+        if (hasLocalStorage) {
+          cartStorage.setItem('cart', JSON.stringify(cart));
+        }
+      }
+
+      return {
+        add: function (phone) {
+          cart.push(phone);
+          updateCartStorage();
+        },
+        remove: function (index) {
+          cart.splice(index, 1);
+          updateCartStorage();
+        },
+        fetch: function () {
+          return cart;
+        },
+        calculateTotalPrice: function () {
+          var totalPrice = 0;
+          cart.forEach(function (phone) {
+            totalPrice += phone.price;
+          });
+          return totalPrice;
+        }
+      };
+    }
+  ])
   .value('conditions', [
     {
       condition: 'Mint',
