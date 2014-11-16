@@ -2,10 +2,11 @@ footer.container.text-center
   .row
     .col-md-12
       ul.nav.nav-pills
-        li
-          a(href='#') Home
-        li
-          a(href='#') About Us
+        li(ui-sref-active-eq='active')
+          a(ui-sref='faq') FAQ
+        li(ui-sref-active-eq='active')
+          a(ui-sref='customerReview') Customer Reviews
+
       p &copy; 2014 Cash 4 My Device LLC. All Rights Reserved.
       p Cash 4 My Device is not affiliated with the manufacturers of the items available for trade-in.
       p These images, logos, and brands are the property of their respective owners.
